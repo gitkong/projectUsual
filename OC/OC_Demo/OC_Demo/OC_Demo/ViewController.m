@@ -11,6 +11,7 @@
 #import "Person.h"
 #import "NSString+CGSize.h"
 #import "NSString+Line.h"
+#import "UIFont+FLUnits.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @end
@@ -52,11 +53,17 @@
     label.text = person.name;
     [self.view addSubview:label];
     
-    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(100, 200, 100, [@"hjahdshajhdkjfhalkhdljfhafd" fl_textHeightWithMaxWidth:100.0f font:[UIFont systemFontOfSize:17]])];
+    UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(100, 200, 100, [@"hjahdshajhdkjfhalkhdljfhafd" fl_textHeightWithMaxWidth:100.0f font:[UIFont systemFontOfSize:[UIFont fl_systemFontSize]]])];
     label1.attributedText = @"hjahdshajhdkjfhalkhdljfhafd".fl_addCenterLine;
     label1.numberOfLines = 0;
     [self.view addSubview:label1];
     
+    [UIFont systemFontSize];
+    
+    UIFont *newFont = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    UIFontDescriptor *ctfFont = newFont.fontDescriptor;
+    NSNumber *fontString = [ctfFont objectForKey:@"NSFontSizeAttribute"];
+    NSLog(@"fontSize = %lf--%lf--%lf--%lf--%lf",[UIFont systemFontSize],[UIFont labelFontSize],[UIFont buttonFontSize],[UIFont smallSystemFontSize],fontString.floatValue);
 }
 
 @end
