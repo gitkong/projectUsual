@@ -1,28 +1,14 @@
 //
-//  NSObject+FLUnits.h
+//  NSObject+KVO.h
+//  OC_Demo
 //
-//  Created by 孔凡列 on 16/7/13.
+//  Created by clarence on 16/8/30.
 //  Copyright © 2016年 clarence. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-
-NS_ASSUME_NONNULL_BEGIN
-
-@interface NSObject (FLUnits)
-
-// 打印所有属性以及其类型
-+ (void)fl_printAllProperties;
-// 返回所有方法数组
-+(NSArray*)fl_methodList;
-
-#pragma mark - 交换方法
-+ (BOOL)fl_swizzleMethod:(SEL)origSel_ withMethod:(SEL)altSel_ error:(NSError**)error_;
-
-+ (BOOL)fl_swizzleClassMethod:(SEL)origSel_ withClassMethod:(SEL)altSel_ error:(NSError**)error_;
-
-
+@interface NSObject (Monitor)
 #pragma mark - KVO
 
 /**
@@ -31,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param keyPath 监听路径
  *  @param block   KVO回调block，obj为监听对象，oldVal为旧值，newVal为新值
  */
-- (void)fl_addObserverBlockForKeyPath:(NSString*)keyPath block:(void (^)(id obj, id oldVal, id newVal))block;
+- (void)fl_addObserverBlockForKeyPath:(NSString *)keyPath block:(void (^)(id obj, id oldVal, id newVal))block;
 
 /**
  *  提前移除指定KeyPath下的BlockKVO(一般无需使用，如果需要提前注销KVO才需要)
@@ -76,31 +62,4 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)fl_postNotificationWithName:(NSString *)name userInfo:(nullable NSDictionary *)userInfo;
 
 
-/**
- *  解码（从文件中解析对象）
- */
-- (void)decode:(NSCoder *)decoder;
-/**
- *  编码（将对象写入文件中）
- */
-- (void)encode:(NSCoder *)encoder;
 @end
-
-/**
- 归档的实现
- */
-#define FLCodingImplementation \
-- (id)initWithCoder:(NSCoder *)decoder \
-{ \
-if (self = [super init]) { \
-[self decode:decoder]; \
-} \
-return self; \
-} \
-\
-- (void)encodeWithCoder:(NSCoder *)encoder \
-{ \
-[self encode:encoder]; \
-}
-
-NS_ASSUME_NONNULL_END

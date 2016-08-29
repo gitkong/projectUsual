@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//
+//  Created by 孔凡列 on 16/7/11.
+//  Copyright © 2016年 czebd. All rights reserved.
+
+/*
+    setting-prefix Header - $(SRCROOT)/项目名/PrefixHeader.pch
+ */
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#import "Macros.h"
+
+#endif
+
+#endif /* PrefixHeader_pch */
