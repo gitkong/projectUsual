@@ -24,6 +24,11 @@ extension UIViewController {
     func fl_dismissToTop() {
         var viewController = self as UIViewController
         // find
+        /**
+         *  @author 孔凡列, 16-09-01 05:09:24
+         *
+         *  通用，不过有个交互不太好的问题
+         */
         while (viewController.presentingViewController != nil) {
             if viewController.isKindOfClass(UIViewController.self) {
                 viewController = viewController.presentingViewController!
@@ -32,7 +37,31 @@ extension UIViewController {
                 break
             }
         }
-        viewController.dismissViewControllerAnimated(true, completion: nil)
+        viewController.presentedViewController!.presentingViewController!.dismissViewControllerAnimated(true, completion: nil)
+        
+        /**
+         *  @author 孔凡列, 16-09-01 05:09:44
+         *
+         *  适用情况，连续两次present，多次不行。。。。
+         */
+//        let view : UIView = viewController.view
+//        let navBar = viewController.navigationController?.navigationBar
+//        while (viewController.presentingViewController != nil) {
+//            if viewController.isKindOfClass(UIViewController.self) {
+//                if viewController != self {
+//                    viewController.view.addSubview(view)
+//                    if self.navigationController?.viewControllers.count > 1 {
+//                        viewController.view.addSubview(navBar!)
+//                    }
+//                }
+//                viewController = viewController.presentingViewController!
+//            }
+//            else {
+//                break
+//            }
+//        }
+//        viewController.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     /**
      截屏,暂不提供
@@ -60,20 +89,25 @@ extension UIViewController {
      - returns: return value description
      */
     func fl_transationStyle() -> FLTransationStyle {
-        var viewControllers : [UIViewController] = (self.navigationController?.viewControllers)!
-        if self.isKindOfClass(UINavigationController.self) {
-            let nav = self as! UINavigationController
-            viewControllers = nav.viewControllers
-        }
-        if viewControllers.count > 1 {
-            if viewControllers.last == self {
-                return FLTransationStyle.push
+        if self.navigationController?.viewControllers.count > 1 {
+            var viewControllers : [UIViewController] = (self.navigationController?.viewControllers)!
+            if self.isKindOfClass(UINavigationController.self) {
+                let nav = self as! UINavigationController
+                viewControllers = nav.viewControllers
+            }
+            if viewControllers.count > 1 {
+                if viewControllers.last == self {
+                    return FLTransationStyle.push
+                }
+                else{
+                    return FLTransationStyle.modal
+                }
             }
             else{
                 return FLTransationStyle.modal
             }
         }
-        else{
+        else {
             return FLTransationStyle.modal
         }
     }

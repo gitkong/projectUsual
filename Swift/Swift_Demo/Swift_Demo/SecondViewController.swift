@@ -32,7 +32,7 @@ class SecondViewController: UIViewController ,UIViewControllerTransitioningDeleg
 //        presentViewController(vc, animated: true, completion: nil)
         let nav = UINavigationController.init(rootViewController: vc)
         presentViewController(nav, animated: true, completion: nil)
-        
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {

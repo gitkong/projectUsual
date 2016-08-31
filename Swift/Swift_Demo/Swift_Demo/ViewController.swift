@@ -41,6 +41,9 @@ class ViewController: UIViewController,FLCarouselViewDataSource ,FLCarouselViewD
 //        toVc.delegate = self
 //        transitionController.writeToViewController(toVc)
         self.presentViewController(toVc, animated: true, completion: nil)
+        
+//        let nav = UINavigationController.init(rootViewController: toVc)
+//        presentViewController(nav, animated: true, completion: nil)
         print(index)
     }
     
