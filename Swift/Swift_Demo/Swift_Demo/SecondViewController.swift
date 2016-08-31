@@ -14,7 +14,8 @@ class SecondViewController: UIViewController ,UIViewControllerTransitioningDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
+        self.title = "second vc"
+        view.backgroundColor = UIColor.grayColor()
         
         let btn = UIButton.init(frame: CGRect.init(x: 100, y: 100, width: 100, height: 100))
         btn.backgroundColor = UIColor.redColor()
@@ -26,6 +27,13 @@ class SecondViewController: UIViewController ,UIViewControllerTransitioningDeleg
         delegate?.clickToDismiss()
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let vc = ThirdViewController()
+//        presentViewController(vc, animated: true, completion: nil)
+        let nav = UINavigationController.init(rootViewController: vc)
+        presentViewController(nav, animated: true, completion: nil)
+        
+    }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return FLNormalDismissAnimation()

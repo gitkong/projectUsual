@@ -16,6 +16,7 @@ class ViewController: UIViewController,FLCarouselViewDataSource ,FLCarouselViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "first vc"
         let carousel = FLCarouselView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: 300))
         carousel.dataSource = self
         carousel.delegate = self
@@ -36,9 +37,9 @@ class ViewController: UIViewController,FLCarouselViewDataSource ,FLCarouselViewD
     
     func carouselView(collectionView: UICollectionView, didSelectItemAtIndexPath index: NSInteger) {
         let toVc = SecondViewController()
-        toVc.transitioningDelegate = self
-        toVc.delegate = self
-        transitionController.writeToViewController(toVc)
+//        toVc.transitioningDelegate = self
+//        toVc.delegate = self
+//        transitionController.writeToViewController(toVc)
         self.presentViewController(toVc, animated: true, completion: nil)
         print(index)
     }
