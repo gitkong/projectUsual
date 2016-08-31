@@ -47,6 +47,8 @@ static CGFloat const FLStatusBarTitleFontSize = 12;
     [self setupWindow];
     //创建按钮
     _button = [UIButton buttonWithType:UIButtonTypeCustom];
+    // 暂时屏蔽点击事件
+    _button.enabled = NO;
     _button.titleLabel.font = [UIFont systemFontOfSize:FLStatusBarTitleFontSize];
     [_button setTitle:message forState:UIControlStateNormal];
     if (image) {
@@ -125,7 +127,6 @@ static CGFloat const FLStatusBarTitleFontSize = 12;
     
     _window.hidden = YES;
     _window = [[UIWindow alloc]init];
-    
     _window.frame = CGRectMake(0, -FLStatusBarHeight, FLStatusBarWidth, FLStatusBarHeight);
     _window.backgroundColor = [UIColor orangeColor];
     _window.windowLevel = UIWindowLevelStatusBar;
@@ -135,6 +136,36 @@ static CGFloat const FLStatusBarTitleFontSize = 12;
     [UIView animateWithDuration:FLAnimationDuration animations:^{
         _window.transform = CGAffineTransformMakeTranslation(0, FLStatusBarHeight);
     }];
+}
+
++ (nullable UIViewController *)fl_viewControllerWithView:(UIView *)view {
+    UIResponder *responder = view;
+    while ((responder = [responder nextResponder]))
+        if ([responder isKindOfClass: [UIViewController class]]) {
+            return (UIViewController *)responder;
+        }
+    return nil;
+}
+
+- (void)slideUpHandle:(UIGestureRecognizer *)gestureR{
+    CGPoint xy = [gestureR locationInView:_window];
+    switch (gestureR.state) {
+        case UIGestureRecognizerStateBegan:
+            
+            break;
+        case UIGestureRecognizerStateChanged:
+            NSLog(@"---%lf",xy.y);
+            break;
+        case UIGestureRecognizerStateEnded:
+            
+            break;
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateFailed:
+            
+            break;
+        default:
+            break;
+    }
 }
 
 
@@ -162,6 +193,20 @@ static CGFloat const FLStatusBarTitleFontSize = 12;
     
     _window.backgroundColor = backgroundColor;
     
+}
+
++ (UIWindow *)lastWindow
+{
+    NSArray *windows = [UIApplication sharedApplication].windows;
+    for(UIWindow *window in [windows reverseObjectEnumerator]) {
+        
+        if ([window isKindOfClass:[UIWindow class]] &&
+            CGRectEqualToRect(window.bounds, [UIScreen mainScreen].bounds))
+            
+            return window;
+    }
+    
+    return [UIApplication sharedApplication].keyWindow;
 }
 
 @end

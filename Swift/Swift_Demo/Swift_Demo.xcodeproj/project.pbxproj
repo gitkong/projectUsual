@@ -15,6 +15,10 @@
 		1143B7ED1D74BE24009CFA33 /* Swift_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7EC1D74BE24009CFA33 /* Swift_DemoTests.swift */; };
 		1143B7F81D74BE24009CFA33 /* Swift_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7F71D74BE24009CFA33 /* Swift_DemoUITests.swift */; };
 		1143B8061D74BE7A009CFA33 /* FLCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143B8051D74BE7A009CFA33 /* FLCarouselView.swift */; };
+		1143B8081D74FF2A009CFA33 /* FLBouncePresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143B8071D74FF2A009CFA33 /* FLBouncePresentAnimation.swift */; };
+		1143B80A1D7501F6009CFA33 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143B8091D7501F6009CFA33 /* SecondViewController.swift */; };
+		1143B80C1D75082E009CFA33 /* FLSlideInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1143B80B1D75082E009CFA33 /* FLSlideInteractiveTransition.swift */; };
+		11C2DF0A1D766D5F00E51D18 /* FLNormalDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2DF091D766D5F00E51D18 /* FLNormalDismissAnimation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		1143B7F71D74BE24009CFA33 /* Swift_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_DemoUITests.swift; sourceTree = "<group>"; };
 		1143B7F91D74BE24009CFA33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1143B8051D74BE7A009CFA33 /* FLCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLCarouselView.swift; sourceTree = "<group>"; };
+		1143B8071D74FF2A009CFA33 /* FLBouncePresentAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLBouncePresentAnimation.swift; sourceTree = "<group>"; };
+		1143B8091D7501F6009CFA33 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		1143B80B1D75082E009CFA33 /* FLSlideInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLSlideInteractiveTransition.swift; sourceTree = "<group>"; };
+		11C2DF091D766D5F00E51D18 /* FLNormalDismissAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLNormalDismissAnimation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,11 @@
 			children = (
 				1143B7D71D74BE24009CFA33 /* AppDelegate.swift */,
 				1143B7D91D74BE24009CFA33 /* ViewController.swift */,
+				1143B8091D7501F6009CFA33 /* SecondViewController.swift */,
 				1143B8051D74BE7A009CFA33 /* FLCarouselView.swift */,
+				1143B8071D74FF2A009CFA33 /* FLBouncePresentAnimation.swift */,
+				11C2DF091D766D5F00E51D18 /* FLNormalDismissAnimation.swift */,
+				1143B80B1D75082E009CFA33 /* FLSlideInteractiveTransition.swift */,
 				1143B7DB1D74BE24009CFA33 /* Main.storyboard */,
 				1143B7DE1D74BE24009CFA33 /* Assets.xcassets */,
 				1143B7E01D74BE24009CFA33 /* LaunchScreen.storyboard */,
@@ -259,8 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C2DF0A1D766D5F00E51D18 /* FLNormalDismissAnimation.swift in Sources */,
+				1143B8081D74FF2A009CFA33 /* FLBouncePresentAnimation.swift in Sources */,
 				1143B7DA1D74BE24009CFA33 /* ViewController.swift in Sources */,
 				1143B8061D74BE7A009CFA33 /* FLCarouselView.swift in Sources */,
+				1143B80C1D75082E009CFA33 /* FLSlideInteractiveTransition.swift in Sources */,
+				1143B80A1D7501F6009CFA33 /* SecondViewController.swift in Sources */,
 				1143B7D81D74BE24009CFA33 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,6 +502,7 @@
 				1143B7FE1D74BE24009CFA33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1143B7FF1D74BE24009CFA33 /* Build configuration list for PBXNativeTarget "Swift_DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +511,7 @@
 				1143B8011D74BE24009CFA33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1143B8021D74BE24009CFA33 /* Build configuration list for PBXNativeTarget "Swift_DemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +520,7 @@
 				1143B8041D74BE24009CFA33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

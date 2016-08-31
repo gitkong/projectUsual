@@ -27,7 +27,7 @@ private let reuseId : String = "FLCarouselReuseId"
 
 class FLCarouselView: UIView {
     
-    // 轮播时间间隔
+    // 时间间隔
     var fl_scrollTimeInterval : Double = 0.0{
         didSet{
             invalidateTimer()
@@ -87,7 +87,7 @@ class FLCarouselView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // 刷新轮播
+    // 刷新轮播,必须调用
     func fl_reloadData() -> () {
         numberOfItems = (dataSource?.numberOfItems(self))!
         

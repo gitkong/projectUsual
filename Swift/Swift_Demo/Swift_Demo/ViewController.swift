@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController,FLCarouselViewDataSource ,FLCarouselViewDelegate{
+class ViewController: UIViewController,FLCarouselViewDataSource ,FLCarouselViewDelegate,UIViewControllerTransitioningDelegate{
     
     var arr : NSArray = ["1","2","3","1","2","3","1","2","3","1","2","3","1","2","3","1","2","3","1","2","3"]
+    
+    let transitionController = FLSlideInteractiveTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,30 @@ class ViewController: UIViewController,FLCarouselViewDataSource ,FLCarouselViewD
     }
     
     func carouselView(collectionView: UICollectionView, didSelectItemAtIndexPath index: NSInteger) {
+        let toVc = SecondViewController()
+        toVc.transitioningDelegate = self
+        toVc.delegate = self
+        transitionController.writeToViewController(toVc)
+        self.presentViewController(toVc, animated: true, completion: nil)
         print(index)
+    }
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return FLBouncePresentAnimation()
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return FLNormalDismissAnimation()
+    }
+    
+    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return transitionController.interacting ? transitionController : nil
+    }
+}
+
+extension ViewController : FLDismissDelegate{
+    func clickToDismiss() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

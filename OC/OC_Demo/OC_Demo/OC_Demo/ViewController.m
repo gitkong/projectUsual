@@ -12,6 +12,7 @@
 #import "NSString+CGSize.h"
 #import "NSString+Line.h"
 #import "UIFont+FLUnits.h"
+#import "FLStatusBarHUD.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @end
@@ -64,6 +65,11 @@
     UIFontDescriptor *ctfFont = newFont.fontDescriptor;
     NSNumber *fontString = [ctfFont objectForKey:@"NSFontSizeAttribute"];
     NSLog(@"fontSize = %lf--%lf--%lf--%lf--%lf",[UIFont systemFontSize],[UIFont labelFontSize],[UIFont buttonFontSize],[UIFont smallSystemFontSize],fontString.floatValue);
+    
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [FLStatusBarHUD fl_showStatus:@"hello world" autoDismiss:YES];
 }
 
 @end
