@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  SecondViewController.h
 //  OC_Demo
 //
-//  Created by clarence on 16/8/30.
+//  Created by clarence on 16/9/1.
 //  Copyright © 2016年 clarence. All rights reserved.
 //
 
 #import "FLTranlucentRootViewController.h"
 
-@interface ViewController : FLTranlucentRootViewController
-
+@interface SecondViewController : FLTranlucentRootViewController
 
 @end
-

@@ -21,6 +21,24 @@ class SecondViewController: UIViewController ,UIViewControllerTransitioningDeleg
         btn.backgroundColor = UIColor.redColor()
         btn.addTarget(self, action: #selector(SecondViewController.dismiss), forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(btn)
+        
+        navigationController?.navigationBar.setBackgroundImage(self.imageWithColor(UIColor.orangeColor()), forBarMetrics: .Default)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    func imageWithColor(color : UIColor) -> UIImage {
+        let rect = CGRect.init(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, color.CGColor)
+        CGContextFillRect(context, rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
     }
     
     func dismiss() {
@@ -31,7 +49,7 @@ class SecondViewController: UIViewController ,UIViewControllerTransitioningDeleg
         let vc = ThirdViewController()
 //        presentViewController(vc, animated: true, completion: nil)
         let nav = UINavigationController.init(rootViewController: vc)
-        presentViewController(nav, animated: true, completion: nil)
+//        presentViewController(nav, animated: true, completion: nil)
 //        navigationController?.pushViewController(vc, animated: true)
     }
     

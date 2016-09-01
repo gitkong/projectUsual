@@ -13,6 +13,8 @@
 #import "NSString+Line.h"
 #import "UIFont+FLUnits.h"
 #import "FLStatusBarHUD.h"
+
+#import "SecondViewController.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @end
@@ -22,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+//    self.fl_isUserTranslucentNavigationBar = YES;
     
     self.dataArr = [NSMutableArray array];
     NSArray *dictArr = @[@{@"name" : @"Jack",
@@ -66,10 +70,19 @@
     NSNumber *fontString = [ctfFont objectForKey:@"NSFontSizeAttribute"];
     NSLog(@"fontSize = %lf--%lf--%lf--%lf--%lf",[UIFont systemFontSize],[UIFont labelFontSize],[UIFont buttonFontSize],[UIFont smallSystemFontSize],fontString.floatValue);
     
+    
+    self.title = @"first viewController";
+    self.fl_navBarColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor greenColor];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [FLStatusBarHUD fl_showStatus:@"hello world" autoDismiss:YES];
+//    [FLStatusBarHUD fl_showStatus:@"hello world" autoDismiss:YES];
+    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
 }
 
 @end

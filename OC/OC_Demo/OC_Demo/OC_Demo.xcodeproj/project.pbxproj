@@ -16,6 +16,9 @@
 		1143B7C31D74AD9B009CFA33 /* NSString+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C21D74AD9B009CFA33 /* NSString+Attribute.m */; };
 		1143B7C61D74AE09009CFA33 /* NSString+Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C51D74AE09009CFA33 /* NSString+Line.m */; };
 		1143B7CA1D74B199009CFA33 /* UIFont+FLUnits.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C91D74B199009CFA33 /* UIFont+FLUnits.m */; };
+		11BC2A671D77A10A00199FAE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A661D77A10A00199FAE /* SecondViewController.m */; };
+		11BC2A771D77B42200199FAE /* FLTranlucentRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A761D77B42200199FAE /* FLTranlucentRootViewController.m */; };
+		11BC2A7A1D77B44B00199FAE /* FLNormalRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A791D77B44B00199FAE /* FLNormalRootViewController.m */; };
 		11F5A6C61D74979A00E0ADE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5A6C51D74979A00E0ADE4 /* main.m */; };
 		11F5A6C91D74979A00E0ADE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5A6C81D74979A00E0ADE4 /* AppDelegate.m */; };
 		11F5A6CC1D74979A00E0ADE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5A6CB1D74979A00E0ADE4 /* ViewController.m */; };
@@ -112,6 +115,12 @@
 		1143B7C51D74AE09009CFA33 /* NSString+Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Line.m"; sourceTree = "<group>"; };
 		1143B7C81D74B199009CFA33 /* UIFont+FLUnits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FLUnits.h"; sourceTree = "<group>"; };
 		1143B7C91D74B199009CFA33 /* UIFont+FLUnits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FLUnits.m"; sourceTree = "<group>"; };
+		11BC2A651D77A10A00199FAE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		11BC2A661D77A10A00199FAE /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		11BC2A751D77B42200199FAE /* FLTranlucentRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLTranlucentRootViewController.h; sourceTree = "<group>"; };
+		11BC2A761D77B42200199FAE /* FLTranlucentRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLTranlucentRootViewController.m; sourceTree = "<group>"; };
+		11BC2A781D77B44B00199FAE /* FLNormalRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNormalRootViewController.h; sourceTree = "<group>"; };
+		11BC2A791D77B44B00199FAE /* FLNormalRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNormalRootViewController.m; sourceTree = "<group>"; };
 		11F5A6C11D74979A00E0ADE4 /* OC_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OC_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F5A6C51D74979A00E0ADE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11F5A6C71D74979A00E0ADE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -303,6 +312,12 @@
 				11F5A6C81D74979A00E0ADE4 /* AppDelegate.m */,
 				11F5A6CA1D74979A00E0ADE4 /* ViewController.h */,
 				11F5A6CB1D74979A00E0ADE4 /* ViewController.m */,
+				11BC2A651D77A10A00199FAE /* SecondViewController.h */,
+				11BC2A661D77A10A00199FAE /* SecondViewController.m */,
+				11BC2A751D77B42200199FAE /* FLTranlucentRootViewController.h */,
+				11BC2A761D77B42200199FAE /* FLTranlucentRootViewController.m */,
+				11BC2A781D77B44B00199FAE /* FLNormalRootViewController.h */,
+				11BC2A791D77B44B00199FAE /* FLNormalRootViewController.m */,
 				11F5A7B81D749C9800E0ADE4 /* NSObject + Model */,
 				11F5A6D01D74979A00E0ADE4 /* Assets.xcassets */,
 				11F5A6D51D74979B00E0ADE4 /* Info.plist */,
@@ -932,7 +947,10 @@
 				11F5A7AD1D74988800E0ADE4 /* UIControl+FLUnits.m in Sources */,
 				11F5A7911D74988800E0ADE4 /* NSMutableAttributedString+Link.m in Sources */,
 				11F5A7AE1D74988800E0ADE4 /* UIImage+FLUnits.m in Sources */,
+				11BC2A7A1D77B44B00199FAE /* FLNormalRootViewController.m in Sources */,
+				11BC2A771D77B42200199FAE /* FLTranlucentRootViewController.m in Sources */,
 				11F5A79E1D74988800E0ADE4 /* CryptorTools.m in Sources */,
+				11BC2A671D77A10A00199FAE /* SecondViewController.m in Sources */,
 				11F5A7AC1D74988800E0ADE4 /* UIColor+FLUnits.m in Sources */,
 				1143B7C01D74AD35009CFA33 /* NSString+HexColor.m in Sources */,
 				11F5A78E1D74988800E0ADE4 /* FLAdvertiseView.m in Sources */,

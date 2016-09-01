@@ -19,12 +19,29 @@ class ViewController: UIViewController,FLCarouselViewDataSource ,FLCarouselViewD
         self.title = "first vc"
         let carousel = FLCarouselView.init(frame: CGRect.init(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: 300))
         carousel.dataSource = self
+        carousel.backgroundColor = UIColor.clearColor()
         carousel.delegate = self
         carousel.fl_scrollTimeInterval = 4.0
         view.addSubview(carousel)
         carousel.fl_reloadData()
+        navigationController?.navigationBar.setBackgroundImage(self.imageWithColor(UIColor.clearColor()), forBarMetrics: .Default)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    
+    func imageWithColor(color : UIColor) -> UIImage {
+        let rect = CGRect.init(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+        UIGraphicsBeginImageContext(rect.size)
+        let context = UIGraphicsGetCurrentContext()
+        CGContextSetFillColorWithColor(context, color.CGColor)
+        CGContextFillRect(context, rect)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
     func numberOfItems(carousel: FLCarouselView) -> Int {
         return arr.count
     }
@@ -40,10 +57,11 @@ class ViewController: UIViewController,FLCarouselViewDataSource ,FLCarouselViewD
 //        toVc.transitioningDelegate = self
 //        toVc.delegate = self
 //        transitionController.writeToViewController(toVc)
-        self.presentViewController(toVc, animated: true, completion: nil)
+//        self.presentViewController(toVc, animated: true, completion: nil)
         
 //        let nav = UINavigationController.init(rootViewController: toVc)
 //        presentViewController(nav, animated: true, completion: nil)
+        navigationController?.pushViewController(toVc, animated: true)
         print(index)
     }
     
