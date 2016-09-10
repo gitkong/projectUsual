@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110F5A041D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F5A031D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m */; };
 		1143B7B11D74A013009CFA33 /* NSObject+MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7B01D74A013009CFA33 /* NSObject+MethodSwizzle.m */; };
 		1143B7B41D74A0B7009CFA33 /* NSObject+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7B31D74A0B7009CFA33 /* NSObject+Monitor.m */; };
 		1143B7B71D74A51A009CFA33 /* NSObject+Coding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7B61D74A51A009CFA33 /* NSObject+Coding.m */; };
@@ -16,6 +17,7 @@
 		1143B7C31D74AD9B009CFA33 /* NSString+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C21D74AD9B009CFA33 /* NSString+Attribute.m */; };
 		1143B7C61D74AE09009CFA33 /* NSString+Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C51D74AE09009CFA33 /* NSString+Line.m */; };
 		1143B7CA1D74B199009CFA33 /* UIFont+FLUnits.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C91D74B199009CFA33 /* UIFont+FLUnits.m */; };
+		115DDF281D8470E700E99E81 /* NSString+Separate.m in Sources */ = {isa = PBXBuildFile; fileRef = 115DDF271D8470E700E99E81 /* NSString+Separate.m */; };
 		11BC2A671D77A10A00199FAE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A661D77A10A00199FAE /* SecondViewController.m */; };
 		11BC2A771D77B42200199FAE /* FLTranlucentRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A761D77B42200199FAE /* FLTranlucentRootViewController.m */; };
 		11BC2A7A1D77B44B00199FAE /* FLNormalRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A791D77B44B00199FAE /* FLNormalRootViewController.m */; };
@@ -97,6 +99,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110F5A021D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLSwipeLeftinteravtiveTransiition.h; sourceTree = "<group>"; };
+		110F5A031D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLSwipeLeftinteravtiveTransiition.m; sourceTree = "<group>"; };
 		1143B7AF1D74A013009CFA33 /* NSObject+MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzle.h"; sourceTree = "<group>"; };
 		1143B7B01D74A013009CFA33 /* NSObject+MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodSwizzle.m"; sourceTree = "<group>"; };
 		1143B7B21D74A0B7009CFA33 /* NSObject+Monitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Monitor.h"; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		1143B7C51D74AE09009CFA33 /* NSString+Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Line.m"; sourceTree = "<group>"; };
 		1143B7C81D74B199009CFA33 /* UIFont+FLUnits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FLUnits.h"; sourceTree = "<group>"; };
 		1143B7C91D74B199009CFA33 /* UIFont+FLUnits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FLUnits.m"; sourceTree = "<group>"; };
+		115DDF261D8470E700E99E81 /* NSString+Separate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Separate.h"; sourceTree = "<group>"; };
+		115DDF271D8470E700E99E81 /* NSString+Separate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Separate.m"; sourceTree = "<group>"; };
 		11BC2A651D77A10A00199FAE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		11BC2A661D77A10A00199FAE /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		11BC2A751D77B42200199FAE /* FLTranlucentRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLTranlucentRootViewController.h; sourceTree = "<group>"; };
@@ -414,6 +420,8 @@
 				11F5A7071D74988800E0ADE4 /* FLAnimatedTransitioning.m */,
 				11F5A7081D74988800E0ADE4 /* FLTransitioning.h */,
 				11F5A7091D74988800E0ADE4 /* FLTransitioning.m */,
+				110F5A021D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.h */,
+				110F5A031D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m */,
 				11F5A70A1D74988800E0ADE4 /* PresentationVc.h */,
 				11F5A70B1D74988800E0ADE4 /* PresentationVc.m */,
 				11F5A70C1D74988800E0ADE4 /* 用法.png */,
@@ -671,6 +679,8 @@
 				1143B7C21D74AD9B009CFA33 /* NSString+Attribute.m */,
 				1143B7C41D74AE09009CFA33 /* NSString+Line.h */,
 				1143B7C51D74AE09009CFA33 /* NSString+Line.m */,
+				115DDF261D8470E700E99E81 /* NSString+Separate.h */,
+				115DDF271D8470E700E99E81 /* NSString+Separate.m */,
 			);
 			path = "NSString + FLUnits";
 			sourceTree = "<group>";
@@ -915,6 +925,7 @@
 				11F5A7BF1D749CB000E0ADE4 /* Classes.m in Sources */,
 				11F5A6C91D74979A00E0ADE4 /* AppDelegate.m in Sources */,
 				1143B7BA1D74A5E2009CFA33 /* NSString+CGSize.m in Sources */,
+				115DDF281D8470E700E99E81 /* NSString+Separate.m in Sources */,
 				1143B7BD1D74ACC8009CFA33 /* NSString+Judge.m in Sources */,
 				1143B7B71D74A51A009CFA33 /* NSObject+Coding.m in Sources */,
 				11F5A7A81D74988800E0ADE4 /* NSDate+FLUnits.m in Sources */,
@@ -950,6 +961,7 @@
 				11BC2A7A1D77B44B00199FAE /* FLNormalRootViewController.m in Sources */,
 				11BC2A771D77B42200199FAE /* FLTranlucentRootViewController.m in Sources */,
 				11F5A79E1D74988800E0ADE4 /* CryptorTools.m in Sources */,
+				110F5A041D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m in Sources */,
 				11BC2A671D77A10A00199FAE /* SecondViewController.m in Sources */,
 				11F5A7AC1D74988800E0ADE4 /* UIColor+FLUnits.m in Sources */,
 				1143B7C01D74AD35009CFA33 /* NSString+HexColor.m in Sources */,

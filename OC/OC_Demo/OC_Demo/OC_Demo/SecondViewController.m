@@ -7,7 +7,7 @@
 //
 
 #import "SecondViewController.h"
-
+#import "UIViewController+FLUnits.h"
 @interface SecondViewController ()
 
 @end
@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navBarColor = [UIColor orangeColor];
+//    self.fl_navBarColor = [UIColor orangeColor];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"second viewController";
     
@@ -27,7 +27,12 @@
 }
 
 - (void)back {
-    [self.navigationController popViewControllerAnimated:YES];
+    if (self.fl_judgeTranstion == FLTransitionStyleModal) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else{
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 /*

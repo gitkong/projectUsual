@@ -9,7 +9,7 @@
 #import "FLTransitioning.h"
 #import "FLAnimatedTransitioning.h"
 #import "PresentationVc.h"
-
+#import "FLSwipeLeftinteravtiveTransiition.h"
 @interface FLTransitioning ()
 
 @end
@@ -31,15 +31,9 @@ static id _instance = nil;
 #pragma mark - PrsentView的
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source{
     PresentationVc *vc = [[PresentationVc alloc] initWithPresentedViewController:presented presentingViewController:presenting];
-//    if (self.fromLeft) {
-//        vc.fromLeft = YES;
-//    }
-//    else{
-//        vc.fromLeft = NO;
-//    }
     return vc;
+//    return [[UIPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
 }
-
 
 #pragma mark - 开始动画调用
 - (id )animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source{
@@ -58,7 +52,13 @@ static id _instance = nil;
 - (id )animationControllerForDismissedController:(UIViewController *)dismissed{
     FLAnimatedTransitioning *endA = [[FLAnimatedTransitioning alloc] init];
     endA.presented = NO;
-    endA.presentDirectionType = FLPresentedDirectionTypeFromRight;
+    if (self.dismissFromLeft) {
+        endA.presentDirectionType = FLPresentedDirectionTypeFromRight;
+    }
+    else{
+        endA.presentDirectionType = FLPresentedDirectionTypeFromLeft;
+    }
+    
     return endA;
 }
 

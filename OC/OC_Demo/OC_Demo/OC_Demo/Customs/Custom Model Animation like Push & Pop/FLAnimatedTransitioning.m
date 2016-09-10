@@ -8,6 +8,11 @@
 
 #import "FLAnimatedTransitioning.h"
 #import <UIKit/UIKit.h>
+
+@interface FLAnimatedTransitioning ()<UIViewControllerAnimatedTransitioning>
+
+@end
+
 @implementation FLAnimatedTransitioning
 
 // 动画执行的时间
@@ -17,6 +22,7 @@ static const CGFloat duration = 0.3;
 - (NSTimeInterval)transitionDuration:(id )transitionContext{
     return duration;
 }
+
 
 #pragma mark - 执行动画的具体实例
 - (void)animateTransition:(id )transitionContext{

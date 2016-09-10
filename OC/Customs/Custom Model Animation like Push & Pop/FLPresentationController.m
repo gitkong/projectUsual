@@ -1,23 +1,27 @@
 //
-//  PresentationVc.m
-//  customModal
+//  FLPresentationController.m
+//  Custom Modal
 //
-//  Created by 孔凡列 on 16/5/4.
-//  Copyright © 2016年 czebd. All rights reserved.
-/////
-///fff
-#import "PresentationVc.h"
+//  Created by clarence on 16/9/2.
+//  Copyright © 2016年 clarence. All rights reserved.
+//
 
-@implementation PresentationVc
-{
+#import "FLPresentationController.h"
+
+@implementation FLPresentationController{
+    // cover view
     UIView *coverView;
 }
-
-#pragma mark - 设置大小的frame，自定义动画时无用
-- (CGRect)frameOfPresentedViewInContainerView{
-    return CGRectMake(10, 20, 200, 200);
-}
-
+/**
+ *  @author 孔凡列, 16-09-02 06:09:59
+ *
+ *  重写构造方法，添加效果
+ *
+ *  @param presentedViewController  被present 的控制器
+ *  @param presentingViewController 正在present 的控制器
+ *
+ *  @return return value description
+ */
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(UIViewController *)presentingViewController{
     if (self = [super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController]) {
         // 添加一些特效什么的~~~这里简单添加了一个遮盖的view，简单做效果演示
@@ -35,18 +39,19 @@
  */
 - (void)presentationTransitionWillBegin{
     NSLog(@"present will begin");
-    // 最重要的 最重要的 最重要的 添加要present的view到容器里面，不然无法present，因为系统都不知道present什么
-    [self.containerView addSubview:self.presentedView];
-    
     // 简单添加效果
     coverView.frame = self.containerView.bounds;
     [self.containerView addSubview:coverView];
+    
+    // 最重要的 最重要的 最重要的 添加要present的view到容器里面，不然无法present，因为系统都不知道present什么，而且一定要最后添加
+    [self.containerView addSubview:self.presentedView];
     
     id<UIViewControllerTransitionCoordinator> coordinator = self.presentingViewController.transitionCoordinator;
     
     [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
         coverView.alpha = 1;
     } completion:nil];
+    
 }
 /**
  *  @author 孔凡列, 16-09-02 06:09:12

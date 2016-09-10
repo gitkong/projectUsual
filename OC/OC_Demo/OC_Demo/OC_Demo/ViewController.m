@@ -15,6 +15,8 @@
 #import "FLStatusBarHUD.h"
 
 #import "SecondViewController.h"
+#import "FLTransitioning.h"
+#import "NSString+Separate.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @end
@@ -24,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    NSLog(@"%@",[@"h,s.haha" fl_separateByCharacters:@",."]);
 //    self.fl_isUserTranslucentNavigationBar = YES;
     
     self.dataArr = [NSMutableArray array];
@@ -34,7 +36,7 @@
                            @"teachers" : @[@{@"teaName" : @"Lisa1", @"teaAge" : @"21"},
                                            @{@"teaName" : @"Lisa2", @"teaAge" : @"22"},
                                            @{@"teaName" : @"Lisa3", @"teaAge" : @"23"}]},
-                         @{@"name" : @"Rose",
+                         @{@"name" : @"小咧咧",
                            @"userId" : @"22222",
                            @"classes" : @{@"className" : @"Math", @"time" : @"2016_04"},
                            @"teachers" : @[@{@"teaName" : @"Lisa1", @"teaAge" : @"21"},
@@ -72,13 +74,23 @@
     
     
     self.title = @"first viewController";
-    self.fl_navBarColor = [UIColor blackColor];
+    self.fl_navBarColor = [UIColor clearColor];
     self.view.backgroundColor = [UIColor greenColor];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    [FLStatusBarHUD fl_showStatus:@"hello world" autoDismiss:YES];
-    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
+//    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[SecondViewController alloc] init]];
+    // 自定义modal方式
+    nav.modalPresentationStyle = UIModalPresentationCustom;
+    // 过渡的delegate
+    FLTransitioning *transition = [FLTransitioning sharedTransitioning];
+    transition.fromLeft = NO;
+    transition.dismissFromLeft = YES;
+    nav.transitioningDelegate = transition;
+    
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

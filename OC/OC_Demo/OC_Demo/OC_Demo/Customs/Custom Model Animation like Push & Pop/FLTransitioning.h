@@ -17,4 +17,6 @@
 
 @property (nonatomic,assign,getter=isFromLeft)BOOL fromLeft;
 
+@property (nonatomic,assign,getter=isDismissFromLeft)BOOL dismissFromLeft;
+
 @end
