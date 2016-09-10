@@ -38,6 +38,36 @@
  */
 + (instancetype)fl_circleImageNamed:(NSString *)name;
 
+/**
+ *  @author 孔凡列, 16-09-11 01:09:11
+ *
+ *  图片添加毛玻璃滤镜效果
+ *
+ *  @param image image description
+ *  @param blur  比例
+ *
+ *  @return return value description
+ */
++ (UIImage *)fl_blurImage:(UIImage *)image blur:(CGFloat)blur;
+
++ (UIImage *)fl_imageWithColor:(UIColor *)color size:(CGSize)size;
+/**
+ *  @author 孔凡列, 16-09-11 01:09:52
+ *
+ *  获得圆形图片
+ *
+ *  @param originImage originImage description
+ *  @param borderColor borderColor description
+ *  @param borderWidth borderWidth description
+ *
+ *  @return return value description
+ */
++ (UIImage *)fl_circleImage:(UIImage *)originImage borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth;
+
+
+
+
+
 
 #pragma mark - 图片拉伸
 /**
