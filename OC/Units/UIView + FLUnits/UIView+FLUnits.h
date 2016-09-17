@@ -18,7 +18,15 @@ IB_DESIGNABLE
 // IBInspectable 可以使得在xib或者sb中看到自定义的属性，进行修改,此时属性名必须和系统一致
 @property(nonatomic, assign) IBInspectable CGFloat borderWidth;
 @property(nonatomic, assign) IBInspectable UIColor  * _Nonnull borderColor;
-// 此时这个属性需要设置能否滚动、背景颜色的时候，需要写在最后
+//
+/**
+ *  @author 孔凡列, 16-09-18 05:09:45
+ *
+ *  注意：1.此时这个属性需要设置能否滚动、背景颜色的时候，需要写在最后
+         2.此方法如果在滚动视图中使用（滚动视图带圆角），会导致整个滚动视图变模糊，解决办法：不做光栅化处理
+ *
+ *  @param cornerRadius 圆角
+ */
 @property(nonatomic, assign) IBInspectable CGFloat cornerRadius;
 
 @property (nonatomic,assign)CGFloat fl_x;

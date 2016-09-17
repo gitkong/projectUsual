@@ -137,6 +137,13 @@
     self.layer.borderColor = borderColor.CGColor;
 }
 
+/**
+ *  @author 孔凡列, 16-09-18 05:09:45
+ *
+ *  注意：此方法如果在滚动视图中使用（滚动视图带圆角），会导致整个滚动视图变模糊，解决办法：不做光栅化处理
+ *
+ *  @param cornerRadius 圆角
+ */
 - (void)setCornerRadius:(CGFloat)cornerRadius
 {
     self.layer.cornerRadius = cornerRadius;
