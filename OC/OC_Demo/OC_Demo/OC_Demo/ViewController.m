@@ -80,17 +80,17 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    [FLStatusBarHUD fl_showStatus:@"hello world" autoDismiss:YES];
-//    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[SecondViewController alloc] init]];
-    // 自定义modal方式
-    nav.modalPresentationStyle = UIModalPresentationCustom;
-    // 过渡的delegate
-    FLTransitioning *transition = [FLTransitioning sharedTransitioning];
-    transition.fromLeft = NO;
-    transition.dismissFromLeft = YES;
-    nav.transitioningDelegate = transition;
-    
-    [self presentViewController:nav animated:YES completion:nil];
+    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[SecondViewController alloc] init]];
+//    // 自定义modal方式
+//    nav.modalPresentationStyle = UIModalPresentationCustom;
+//    // 过渡的delegate
+//    FLTransitioning *transition = [FLTransitioning sharedTransitioning];
+//    transition.fromLeft = NO;
+//    transition.dismissFromLeft = YES;
+//    nav.transitioningDelegate = transition;
+//    
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

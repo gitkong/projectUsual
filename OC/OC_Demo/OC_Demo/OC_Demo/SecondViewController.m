@@ -8,6 +8,9 @@
 
 #import "SecondViewController.h"
 #import "UIViewController+FLUnits.h"
+
+#import "UIView+NOData.h"
+//#import "UIView+FLUnits.h"
 @interface SecondViewController ()
 
 @end
@@ -24,6 +27,26 @@
     
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     self.navigationController.interactivePopGestureRecognizer.delegate = nil;
+    
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 400)];
+    view.backgroundColor = [UIColor grayColor];
+    __weak typeof(view) weakView = view;
+    [view fl_showNoDataViewOperation:^{
+        NSLog(@"hello world");
+        [weakView fl_hideNoDataView];
+    }];
+    [self.view addSubview:view];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+//    [self.view fl_showNoDateView:^{
+//        NSLog(@"hello world");
+//    }];
+    __weak typeof(self) weakSelf = self;
+    [self.view fl_showNoDataViewOperation:^{
+        NSLog(@"hello world");
+        [weakSelf.view fl_hideNoDataView];
+    }];
 }
 
 - (void)back {

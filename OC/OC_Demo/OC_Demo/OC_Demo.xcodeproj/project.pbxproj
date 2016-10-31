@@ -21,6 +21,7 @@
 		11BC2A671D77A10A00199FAE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A661D77A10A00199FAE /* SecondViewController.m */; };
 		11BC2A771D77B42200199FAE /* FLTranlucentRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A761D77B42200199FAE /* FLTranlucentRootViewController.m */; };
 		11BC2A7A1D77B44B00199FAE /* FLNormalRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A791D77B44B00199FAE /* FLNormalRootViewController.m */; };
+		11CBE7A41DC49A2D003CE4B8 /* UIView+NOData.m in Sources */ = {isa = PBXBuildFile; fileRef = 11CBE7A31DC49A2D003CE4B8 /* UIView+NOData.m */; };
 		11F5A6C61D74979A00E0ADE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5A6C51D74979A00E0ADE4 /* main.m */; };
 		11F5A6C91D74979A00E0ADE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5A6C81D74979A00E0ADE4 /* AppDelegate.m */; };
 		11F5A6CC1D74979A00E0ADE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11F5A6CB1D74979A00E0ADE4 /* ViewController.m */; };
@@ -127,6 +128,8 @@
 		11BC2A761D77B42200199FAE /* FLTranlucentRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLTranlucentRootViewController.m; sourceTree = "<group>"; };
 		11BC2A781D77B44B00199FAE /* FLNormalRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLNormalRootViewController.h; sourceTree = "<group>"; };
 		11BC2A791D77B44B00199FAE /* FLNormalRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLNormalRootViewController.m; sourceTree = "<group>"; };
+		11CBE7A21DC49A2D003CE4B8 /* UIView+NOData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NOData.h"; sourceTree = "<group>"; };
+		11CBE7A31DC49A2D003CE4B8 /* UIView+NOData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NOData.m"; sourceTree = "<group>"; };
 		11F5A6C11D74979A00E0ADE4 /* OC_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OC_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F5A6C51D74979A00E0ADE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		11F5A6C71D74979A00E0ADE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -285,6 +288,16 @@
 				1143B7C91D74B199009CFA33 /* UIFont+FLUnits.m */,
 			);
 			path = "UIFont + FLUnits";
+			sourceTree = "<group>";
+		};
+		1159002C1DC6DFF800DB52B8 /* UIView + NOData */ = {
+			isa = PBXGroup;
+			children = (
+				11CBE7A21DC49A2D003CE4B8 /* UIView+NOData.h */,
+				11CBE7A31DC49A2D003CE4B8 /* UIView+NOData.m */,
+			);
+			name = "UIView + NOData";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		11F5A6B81D74979A00E0ADE4 = {
@@ -622,6 +635,7 @@
 		11F5A75C1D74988800E0ADE4 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				1159002C1DC6DFF800DB52B8 /* UIView + NOData */,
 				1143B7C71D74B16F009CFA33 /* UIFont + FLUnits */,
 				11F5A75D1D74988800E0ADE4 /* NSDate + FLUnits */,
 				11F5A7601D74988800E0ADE4 /* NSObject + FLUnits */,
@@ -975,6 +989,7 @@
 				11F5A7AB1D74988800E0ADE4 /* UIBarButtonItem+FLUnits.m in Sources */,
 				11F5A7AF1D74988800E0ADE4 /* UIImage+QRCode.m in Sources */,
 				11F5A7A71D74988800E0ADE4 /* MBProgressHUD.m in Sources */,
+				11CBE7A41DC49A2D003CE4B8 /* UIView+NOData.m in Sources */,
 				11F5A78F1D74988800E0ADE4 /* NSMutableAttributedString+Config.m in Sources */,
 				11F5A7941D74988800E0ADE4 /* TLAttributedLabel.m in Sources */,
 				11F5A7971D74988800E0ADE4 /* UIImageView+GIF.m in Sources */,

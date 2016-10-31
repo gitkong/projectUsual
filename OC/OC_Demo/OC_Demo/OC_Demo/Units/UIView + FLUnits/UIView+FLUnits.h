@@ -54,13 +54,7 @@ IB_DESIGNABLE
 
 
 @interface UIView(Extension)
-#pragma mark - YES-显示无数据页面
-//@property (nonatomic,assign)BOOL fl_showNoDataView;
 
-// 暂不开放
-//@property (nonatomic,copy)void (^fl_opreation)(id target);
-//
-//- (void)fl_showNoDataView:(BOOL)isShow operation:(void (^)(id target))operation;
 
 #pragma mark --- 找第一响应者
 
