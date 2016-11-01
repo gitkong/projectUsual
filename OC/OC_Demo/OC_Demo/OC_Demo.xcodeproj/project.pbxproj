@@ -17,6 +17,7 @@
 		1143B7C31D74AD9B009CFA33 /* NSString+Attribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C21D74AD9B009CFA33 /* NSString+Attribute.m */; };
 		1143B7C61D74AE09009CFA33 /* NSString+Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C51D74AE09009CFA33 /* NSString+Line.m */; };
 		1143B7CA1D74B199009CFA33 /* UIFont+FLUnits.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7C91D74B199009CFA33 /* UIFont+FLUnits.m */; };
+		114F50651DC82D1E00F69558 /* UIView+BadgeValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 114F50641DC82D1E00F69558 /* UIView+BadgeValue.m */; };
 		115DDF281D8470E700E99E81 /* NSString+Separate.m in Sources */ = {isa = PBXBuildFile; fileRef = 115DDF271D8470E700E99E81 /* NSString+Separate.m */; };
 		11BC2A671D77A10A00199FAE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A661D77A10A00199FAE /* SecondViewController.m */; };
 		11BC2A771D77B42200199FAE /* FLTranlucentRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BC2A761D77B42200199FAE /* FLTranlucentRootViewController.m */; };
@@ -120,6 +121,8 @@
 		1143B7C51D74AE09009CFA33 /* NSString+Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Line.m"; sourceTree = "<group>"; };
 		1143B7C81D74B199009CFA33 /* UIFont+FLUnits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FLUnits.h"; sourceTree = "<group>"; };
 		1143B7C91D74B199009CFA33 /* UIFont+FLUnits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FLUnits.m"; sourceTree = "<group>"; };
+		114F50631DC82D1E00F69558 /* UIView+BadgeValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BadgeValue.h"; sourceTree = "<group>"; };
+		114F50641DC82D1E00F69558 /* UIView+BadgeValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BadgeValue.m"; sourceTree = "<group>"; };
 		115DDF261D8470E700E99E81 /* NSString+Separate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Separate.h"; sourceTree = "<group>"; };
 		115DDF271D8470E700E99E81 /* NSString+Separate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Separate.m"; sourceTree = "<group>"; };
 		11BC2A651D77A10A00199FAE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
@@ -288,6 +291,16 @@
 				1143B7C91D74B199009CFA33 /* UIFont+FLUnits.m */,
 			);
 			path = "UIFont + FLUnits";
+			sourceTree = "<group>";
+		};
+		114F508D1DC8583400F69558 /* UIView+BadgeValue */ = {
+			isa = PBXGroup;
+			children = (
+				114F50631DC82D1E00F69558 /* UIView+BadgeValue.h */,
+				114F50641DC82D1E00F69558 /* UIView+BadgeValue.m */,
+			);
+			name = "UIView+BadgeValue";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		1159002C1DC6DFF800DB52B8 /* UIView + NOData */ = {
@@ -650,6 +663,7 @@
 				11F5A77B1D74988800E0ADE4 /* UITextField + FLShake */,
 				11F5A77E1D74988800E0ADE4 /* UIView + FLUnits */,
 				11F5A7811D74988800E0ADE4 /* UIViewController + FLUnits */,
+				114F508D1DC8583400F69558 /* UIView+BadgeValue */,
 			);
 			path = Units;
 			sourceTree = "<group>";
@@ -938,6 +952,7 @@
 				11F5A7B31D74988800E0ADE4 /* UIView+FLUnits.m in Sources */,
 				11F5A7BF1D749CB000E0ADE4 /* Classes.m in Sources */,
 				11F5A6C91D74979A00E0ADE4 /* AppDelegate.m in Sources */,
+				114F50651DC82D1E00F69558 /* UIView+BadgeValue.m in Sources */,
 				1143B7BA1D74A5E2009CFA33 /* NSString+CGSize.m in Sources */,
 				115DDF281D8470E700E99E81 /* NSString+Separate.m in Sources */,
 				1143B7BD1D74ACC8009CFA33 /* NSString+Judge.m in Sources */,

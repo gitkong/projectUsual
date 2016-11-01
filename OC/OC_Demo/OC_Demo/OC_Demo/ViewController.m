@@ -17,6 +17,7 @@
 #import "SecondViewController.h"
 #import "FLTransitioning.h"
 #import "NSString+Separate.h"
+#import "UIView+BadgeValue.h"
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *dataArr;
 @end
@@ -58,6 +59,7 @@
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, [person.name fl_textWidthWithFont:[UIFont systemFontOfSize:17]], 30)];
     label.text = person.name;
+    label.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:label];
     
     UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(100, 200, 100, [@"hjahdshajhdkjfhalkhdljfhafd" fl_textHeightWithMaxWidth:100.0f font:[UIFont systemFontOfSize:[UIFont fl_systemFontSize]]])];
@@ -76,11 +78,22 @@
     self.title = @"first viewController";
     self.fl_navBarColor = [UIColor clearColor];
     self.view.backgroundColor = [UIColor greenColor];
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 400, 100, 30);
+    [btn setTitle:@"我是按钮" forState:UIControlStateNormal];
+    btn.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:btn];
+    
+    btn.fl_badgeValue = @"1000";
+    label.fl_badgeValue = @"10";
+    label1.fl_badgeValue = nil;
+    self.view.fl_badgeValue = @"0";
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    [FLStatusBarHUD fl_showStatus:@"hello world" autoDismiss:YES];
-    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
+//    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
 //    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[SecondViewController alloc] init]];
 //    // 自定义modal方式
 //    nav.modalPresentationStyle = UIModalPresentationCustom;
@@ -91,6 +104,9 @@
 //    nav.transitioningDelegate = transition;
 //    
 //    [self presentViewController:nav animated:YES completion:nil];
+    
+    
+    NSLog(@"badgeValue = %@",self.view.fl_badgeValue);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
