@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110925F01DC98A6900158344 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110925EF1DC98A6900158344 /* ThirdViewController.m */; };
 		110F5A041D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F5A031D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m */; };
 		1143B7B11D74A013009CFA33 /* NSObject+MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7B01D74A013009CFA33 /* NSObject+MethodSwizzle.m */; };
 		1143B7B41D74A0B7009CFA33 /* NSObject+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7B31D74A0B7009CFA33 /* NSObject+Monitor.m */; };
@@ -101,6 +102,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110925EE1DC98A6900158344 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		110925EF1DC98A6900158344 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		110F5A021D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLSwipeLeftinteravtiveTransiition.h; sourceTree = "<group>"; };
 		110F5A031D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLSwipeLeftinteravtiveTransiition.m; sourceTree = "<group>"; };
 		1143B7AF1D74A013009CFA33 /* NSObject+MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzle.h"; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 				11F5A6CB1D74979A00E0ADE4 /* ViewController.m */,
 				11BC2A651D77A10A00199FAE /* SecondViewController.h */,
 				11BC2A661D77A10A00199FAE /* SecondViewController.m */,
+				110925EE1DC98A6900158344 /* ThirdViewController.h */,
+				110925EF1DC98A6900158344 /* ThirdViewController.m */,
 				11BC2A751D77B42200199FAE /* FLTranlucentRootViewController.h */,
 				11BC2A761D77B42200199FAE /* FLTranlucentRootViewController.m */,
 				11BC2A781D77B44B00199FAE /* FLNormalRootViewController.h */,
@@ -1006,6 +1011,7 @@
 				11F5A7A71D74988800E0ADE4 /* MBProgressHUD.m in Sources */,
 				11CBE7A41DC49A2D003CE4B8 /* UIView+NOData.m in Sources */,
 				11F5A78F1D74988800E0ADE4 /* NSMutableAttributedString+Config.m in Sources */,
+				110925F01DC98A6900158344 /* ThirdViewController.m in Sources */,
 				11F5A7941D74988800E0ADE4 /* TLAttributedLabel.m in Sources */,
 				11F5A7971D74988800E0ADE4 /* UIImageView+GIF.m in Sources */,
 				11F5A78D1D74988800E0ADE4 /* FLAdvertiseHelper.m in Sources */,

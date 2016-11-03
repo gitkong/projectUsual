@@ -8,7 +8,7 @@
 
 #import "FLTranlucentRootViewController.h"
 
-@interface ViewController : FLTranlucentRootViewController
+@interface ViewController : UIViewController
 
 
 @end

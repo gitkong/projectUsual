@@ -76,7 +76,7 @@
     
     
     self.title = @"first viewController";
-    self.fl_navBarColor = [UIColor clearColor];
+//    self.fl_navBarColor = [UIColor clearColor];
     self.view.backgroundColor = [UIColor greenColor];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -84,6 +84,16 @@
     [btn setTitle:@"我是按钮" forState:UIControlStateNormal];
     btn.backgroundColor = [UIColor grayColor];
     [self.view addSubview:btn];
+    
+    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 500, 100, 30)];
+    textField.placeholder = @"hello world";
+    textField.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:textField];
+    
+    UIButton *testBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+    testBtn.center = CGPointMake(100, 0);
+    testBtn.backgroundColor = [UIColor grayColor];
+    [textField addSubview:testBtn];
     
     btn.fl_badgeValue = @"1000";
     label.fl_badgeValue = @"10";
@@ -93,7 +103,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
 //    [FLStatusBarHUD fl_showStatus:@"hello world" autoDismiss:YES];
-//    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[SecondViewController alloc] init] animated:YES];
 //    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[SecondViewController alloc] init]];
 //    // 自定义modal方式
 //    nav.modalPresentationStyle = UIModalPresentationCustom;
