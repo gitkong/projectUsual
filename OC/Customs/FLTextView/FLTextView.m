@@ -39,7 +39,6 @@
 
 - (void)setText:(NSString *)text{
     if (text) {
-//        self.placeholder = @"";
         if (![text isEqualToString:@""]) {
             self.placeholderLabel.hidden = YES;
             [super setText:text];
@@ -103,7 +102,6 @@
 }
 
 - (void)textDidEndEdit{
-    // 限定70字
     if (self.textContentBlock) {
         self.textContentBlock(self.text);
     }

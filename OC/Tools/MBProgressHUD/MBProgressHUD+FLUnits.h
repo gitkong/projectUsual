@@ -21,5 +21,6 @@
 + (MBProgressHUD *)showMessage:(NSString *)message;
 
 + (void)hideHUDForView:(UIView *)view;
+
 + (void)hideHUD;
 @end
