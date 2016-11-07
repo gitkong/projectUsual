@@ -29,7 +29,8 @@
 - (BOOL)isLocalBundleVersionRecently{
     // Bundle version is the internal version number of your app.
     // Short version string is the publically visible version of your app.
-    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    // CFBundleShortVersionString 获取的是系统版本，而CFBundleVersion 是获得构建版本
+    NSString *version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     if (version) {
         if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"localBundleVersion"] isEqualToString:version]) {
             // 相等，最新
@@ -63,7 +64,7 @@
                 NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
                 NSArray *arr = [json objectForKey:@"results"];
                 NSString *version = [arr.firstObject objectForKey:@"version"];
-                if ([[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"] isEqualToString:version]) {
+                if ([[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"] isEqualToString:version]) {
                     flag = YES;
                 }
                 else{
