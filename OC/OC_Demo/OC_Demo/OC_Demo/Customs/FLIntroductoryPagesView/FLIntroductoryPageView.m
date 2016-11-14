@@ -9,7 +9,7 @@
 #import "FLIntroductoryPageView.h"
 
 @interface FLIntroductoryPageView ()<UIScrollViewDelegate>
-@property(nonatomic,strong)UIScrollView *bigScrollView;
+@property(nonatomic,weak)UIScrollView *bigScrollView;
 @property(nonatomic)NSArray *imageArray;
 @property(nonatomic,strong)UIPageControl *pageControl;
 @end
@@ -36,7 +36,7 @@
     scrollView.showsHorizontalScrollIndicator = NO;
     scrollView.delegate = self;
     [self addSubview:scrollView];
-    _bigScrollView = scrollView;
+    self.bigScrollView = scrollView;
     
     for (int i = 0; i < _imageArray.count; i++) {
         UIImageView *imageView = [[UIImageView alloc]init];
@@ -70,7 +70,7 @@
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    if (scrollView == _bigScrollView) {
+    if (scrollView == self.bigScrollView) {
         CGPoint offSet = scrollView.contentOffset;
         _pageControl.currentPage = offSet.x/(self.bounds.size.width);//计算当前的页码
         [scrollView setContentOffset:CGPointMake(self.bounds.size.width * (_pageControl.currentPage), scrollView.contentOffset.y) animated:YES];

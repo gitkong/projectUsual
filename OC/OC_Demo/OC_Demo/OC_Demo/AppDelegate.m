@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "FLIntroductoryPagesHelper.h"
+#import "FLFeatureManager.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +22,26 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible ];
+    
+    [[FLFeatureManager shareManager] fl_showFeatureView:@[@"recordBackgroundImage 1",@"recordBackgroundImage 2",@"recordBackgroundImage 3"]];
+//    [FLFeatureManager shareManager].currentIndex = 2;
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"点我移除新特性" forState:UIControlStateNormal];
+    btn.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - 200) / 2, [UIScreen mainScreen].bounds.size.height - 80, 200, 30);
+//    btn.center = [FLFeatureManager shareManager].lastFeatureView.center;
+    [btn addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor redColor];
+    [[FLFeatureManager shareManager].lastFeatureView addSubview:btn];
+//    [FLFeatureManager shareManager].lastFeatureViewClickToDismiss = NO;
+    [FLFeatureManager shareManager].lastFeatureViewSwipToDismiss = YES;
+    
     return YES;
+}
+
+- (void)click{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"确定要移除吗？" message:nil delegate:nil cancelButtonTitle:@"NO" otherButtonTitles: nil];
+    [alert show];
+//    [[FLFeatureManager shareManager] fl_removeFeatureView];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

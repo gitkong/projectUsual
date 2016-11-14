@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		110925F01DC98A6900158344 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 110925EF1DC98A6900158344 /* ThirdViewController.m */; };
 		110F5A041D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m in Sources */ = {isa = PBXBuildFile; fileRef = 110F5A031D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m */; };
+		1112A2B01DD168A10020DAAC /* FLFeatureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1112A2AF1DD168A10020DAAC /* FLFeatureManager.m */; };
 		1143B7B11D74A013009CFA33 /* NSObject+MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7B01D74A013009CFA33 /* NSObject+MethodSwizzle.m */; };
 		1143B7B41D74A0B7009CFA33 /* NSObject+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7B31D74A0B7009CFA33 /* NSObject+Monitor.m */; };
 		1143B7B71D74A51A009CFA33 /* NSObject+Coding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1143B7B61D74A51A009CFA33 /* NSObject+Coding.m */; };
@@ -106,6 +107,8 @@
 		110925EF1DC98A6900158344 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		110F5A021D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLSwipeLeftinteravtiveTransiition.h; sourceTree = "<group>"; };
 		110F5A031D789CF100143E78 /* FLSwipeLeftinteravtiveTransiition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLSwipeLeftinteravtiveTransiition.m; sourceTree = "<group>"; };
+		1112A2AE1DD168A10020DAAC /* FLFeatureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLFeatureManager.h; sourceTree = "<group>"; };
+		1112A2AF1DD168A10020DAAC /* FLFeatureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLFeatureManager.m; sourceTree = "<group>"; };
 		1143B7AF1D74A013009CFA33 /* NSObject+MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzle.h"; sourceTree = "<group>"; };
 		1143B7B01D74A013009CFA33 /* NSObject+MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodSwizzle.m"; sourceTree = "<group>"; };
 		1143B7B21D74A0B7009CFA33 /* NSObject+Monitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Monitor.h"; sourceTree = "<group>"; };
@@ -522,6 +525,8 @@
 				11F5A72E1D74988800E0ADE4 /* FLIntroductoryPagesHelper.m */,
 				11F5A72F1D74988800E0ADE4 /* FLIntroductoryPageView.h */,
 				11F5A7301D74988800E0ADE4 /* FLIntroductoryPageView.m */,
+				1112A2AE1DD168A10020DAAC /* FLFeatureManager.h */,
+				1112A2AF1DD168A10020DAAC /* FLFeatureManager.m */,
 			);
 			path = FLIntroductoryPagesView;
 			sourceTree = "<group>";
@@ -961,6 +966,7 @@
 				1143B7BA1D74A5E2009CFA33 /* NSString+CGSize.m in Sources */,
 				115DDF281D8470E700E99E81 /* NSString+Separate.m in Sources */,
 				1143B7BD1D74ACC8009CFA33 /* NSString+Judge.m in Sources */,
+				1112A2B01DD168A10020DAAC /* FLFeatureManager.m in Sources */,
 				1143B7B71D74A51A009CFA33 /* NSObject+Coding.m in Sources */,
 				11F5A7A81D74988800E0ADE4 /* NSDate+FLUnits.m in Sources */,
 				1143B7C61D74AE09009CFA33 /* NSString+Line.m in Sources */,
