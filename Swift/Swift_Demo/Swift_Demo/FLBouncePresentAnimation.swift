@@ -23,7 +23,7 @@ class FLBouncePresentAnimation: NSObject , UIViewControllerAnimatedTransitioning
         
         // 3.添加目标控制器的view到容器中
         let constainView = transitionContext.containerView()
-        constainView!.addSubview(toVc!.view)
+        constainView.addSubview(toVc!.view)
         
         // 4.开始动画
         let duration = self.transitionDuration(transitionContext)
