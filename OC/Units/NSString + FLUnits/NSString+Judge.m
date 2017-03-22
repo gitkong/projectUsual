@@ -180,6 +180,11 @@
     }
 }
 
+
+- (BOOL)fl_isNetworkUrl{
+    return [[self substringToIndex:4] caseInsensitiveCompare:@"http"] == NSOrderedSame || [[self substringToIndex:5] caseInsensitiveCompare:@"https"] == NSOrderedSame;
+}
+
 // 判断字符串中是否含有指定的字符串
 - (BOOL)fl_isHaveString:(NSString *)desStr{
     NSRange range = [self rangeOfString:desStr];

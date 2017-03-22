@@ -16,6 +16,7 @@
 - (BOOL)fl_isValidateString;// 合法字符（数字、字母、下划线）
 - (BOOL)fl_isValidateIdentityCard;// 身份证
 - (BOOL)fl_isValidateMobileNumber;// 手机号码
+- (BOOL)fl_isNetworkUrl;// 是否网络url
 
 - (BOOL)fl_isHaveString:(NSString *)desStr;// 判断字符串中是否含有指定的字符串
 - (BOOL)fl_isHaveChinese;// 判断字符串中是否含有中文
